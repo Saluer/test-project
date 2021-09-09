@@ -79,33 +79,65 @@ export const PhoneField = ({ validate, isValid }) => {
 export const LanguageField = ({ validate, isValid }) => {
 	const placeholderValue = "Язык";
 	const [value, setValue] = useState("");
-    const hideOrShow=()=>{
-        if(document.getElementsByClassName("text-field__choices")[0].offsetParent === null)
-            document.getElementsByClassName("text-field__choices")[0].style.display = 'block';
-        else
-            document.getElementsByClassName("text-field__choices")[0].style.display = 'none';
-    }
-    const makeChoise=(event)=>{
-        setValue(event.target.value);
-        hideOrShow();
+	const hideOrShow = () => {
+		if (
+			document.getElementsByClassName("text-field__choices")[0].offsetParent ===
+			null
+		)
+			document.getElementsByClassName("text-field__choices")[0].style.display =
+				"block";
+		else
+			document.getElementsByClassName("text-field__choices")[0].style.display =
+				"none";
+	};
+	const makeChoise = (event) => {
+		setValue(event.target.value);
+		hideOrShow();
 		validate(event.target.value, "language");
-    }
+	};
 	return (
-		<div className="form__text-field">
+		<div
+			className="form__text-field"
+			onMouseDown={(event) => {
+				if(event.target.localName !== "input")
+					document.getElementsByClassName(
+						"text-field__choices"
+					)[0].style.display = "none";
+			}}
+		>
 			<label className="text-field__label">Язык</label>
 			<input
 				placeholder={placeholderValue}
 				value={value}
-                onClick={hideOrShow}
-                onBlur={hideOrShow}
-                readOnly={true}
+				onClick={hideOrShow}
+				readOnly={true}
 			/>
-            <div className="text-field__choices" >
-                <input className="choices__choice" value="Русский" readOnly={true} onClick={makeChoise}/>
-                <input className="choices__choice" value="Английский" readOnly={true} onClick={makeChoise}/>
-                <input className="choices__choice" value="Китайский" readOnly={true} onClick={makeChoise}/>
-                <input className="choices__choice" value="Испанский" readOnly={true} onClick={makeChoise}/>
-            </div>
+			<div className="text-field__choices">
+				<input
+					className="choices__choice"
+					value="Русский"
+					readOnly={true}
+					onClick={makeChoise}
+				/>
+				<input
+					className="choices__choice"
+					value="Английский"
+					readOnly={true}
+					onClick={makeChoise}
+				/>
+				<input
+					className="choices__choice"
+					value="Китайский"
+					readOnly={true}
+					onClick={makeChoise}
+				/>
+				<input
+					className="choices__choice"
+					value="Испанский"
+					readOnly={true}
+					onClick={makeChoise}
+				/>
+			</div>
 			{!isValid && (
 				<label className="text-field__error-message error-message">
 					Введите корректное значение
@@ -125,7 +157,7 @@ export const CheckField = ({ validate, isValid }) => {
 		<div className="check-field">
 			<input type="checkbox" checked={value} onChange={handleChange} />
 			Принимаю <a href="#">условия</a> использования
-            <br/>
+			<br />
 			{!isValid && (
 				<label className="check-field__error-message error-message">
 					Для продолжения примите условия использования
