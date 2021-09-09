@@ -79,10 +79,6 @@ export const PhoneField = ({ validate, isValid }) => {
 export const LanguageField = ({ validate, isValid }) => {
 	const placeholderValue = "Язык";
 	const [value, setValue] = useState("");
-	// const handleChange = (event) => {
-	// 	setValue(event.target.value);
-	// 	validate(event.target.value, "language");
-	// };
     const hideOrShow=()=>{
         if(document.getElementsByClassName("text-field__choices")[0].offsetParent === null)
             document.getElementsByClassName("text-field__choices")[0].style.display = 'block';
