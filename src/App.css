@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+*,*:focus,*:hover{
+    outline:none;
+}
+
 body,
 input {
 	font-size: 0.8rem;
@@ -36,16 +40,20 @@ input {
 }
 
 .form__text-field input {
+	padding:0.5rem;
 	border-radius: 0.25rem;
 	display: block;
 	width: 100%;
 	min-height: 2.5rem;
+	border:1px solid rgb(212, 212, 212);
+	box-shadow: 0px 0px 1px 0px rgb(212, 212, 212); 
 	color: rgb(89, 155, 209);
 }
 
+
 .form__text-field > input:focus {
+	border:2px solid rgb(89, 155, 209);
 	color: rgb(3, 3, 7);
-	border: thin rgb(40, 175, 238);
 }
 
 .form__text-field > input:not([value=""]){
