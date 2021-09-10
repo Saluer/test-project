@@ -16,9 +16,14 @@ input {
 .App__form {
 	padding: 1.5rem;
 	margin: 0 auto;
+	background: #ffffff;
+	box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.02),
+		0px 32px 64px rgba(44, 39, 56, 0.04);
+	border-radius: 24px;
 }
 
 .App__form > h2 {
+	margin-top: 1rem;
 	margin-bottom: 0.5rem;
 	font-family: IBM Plex Sans;
 	font-style: normal;
@@ -176,6 +181,6 @@ input {
 
 .button:disabled {
 	cursor: default;
-	background: #DBE2EA;
+	background: #dbe2ea;
 	color: rgb(148, 148, 148);
 }
