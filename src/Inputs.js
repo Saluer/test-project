@@ -90,7 +90,7 @@ export const LanguageField = ({ validate, isValid }) => {
 			document.getElementsByClassName("text-field__choices")[0].style.display =
 				"none";
 	};
-	const makeChoise = (event) => {
+	const makeChoice = (event) => {
 		setValue(event.target.value);
 		hideOrShow();
 		validate(event.target.value, "language");
@@ -106,7 +106,7 @@ export const LanguageField = ({ validate, isValid }) => {
 			}}
 		>
 			<label className="text-field__label">Язык</label>
-			<input
+			<input className="text-field__choice-input"
 				placeholder={placeholderValue}
 				value={value}
 				onClick={hideOrShow}
@@ -117,25 +117,25 @@ export const LanguageField = ({ validate, isValid }) => {
 					className="choices__choice"
 					value="Русский"
 					readOnly={true}
-					onClick={makeChoise}
+					onClick={makeChoice}
 				/>
 				<input
 					className="choices__choice"
 					value="Английский"
 					readOnly={true}
-					onClick={makeChoise}
+					onClick={makeChoice}
 				/>
 				<input
 					className="choices__choice"
 					value="Китайский"
 					readOnly={true}
-					onClick={makeChoise}
+					onClick={makeChoice}
 				/>
 				<input
 					className="choices__choice"
 					value="Испанский"
 					readOnly={true}
-					onClick={makeChoise}
+					onClick={makeChoice}
 				/>
 			</div>
 			{!isValid && (
@@ -150,8 +150,8 @@ export const LanguageField = ({ validate, isValid }) => {
 export const CheckField = ({ validate, isValid }) => {
 	const [value, setValue] = useState(false);
 	const handleChange = () => {
-		setValue(!value);
 		validate(!value, "check");
+		setValue(!value);
 	};
 	return (
 		<div className="check-field">

@@ -72,10 +72,19 @@ input {
 }
 
 .text-field__choices {
+	cursor: pointer;
+	width:100%;
+	position:relative;
+	z-index: 1;
 	border: 1px solid gray;
 	display: none;
 }
+.text-field__choice-input{
+	cursor: pointer;
+}
 .choices__choice {
+	cursor: pointer;
+	width:100%;
 	border: none !important;
 }
 .choices__choice:hover {
