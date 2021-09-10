@@ -131,7 +131,6 @@ input {
 .error-message {
 	position: absolute;
 	margin-top: 4.3rem;
-	z-index: -1;
 	font-family: IBM Plex Sans;
 	font-style: normal;
 	font-weight: normal;
