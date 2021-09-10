@@ -29,7 +29,7 @@ const Form = () => {
 				else setValidInputs({ ...validInputs, [type]: false });
 				break;
 			case "phone":
-				if (/^((\+7|7|8)+([0-9]){10})$/.test(value))
+				if (/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(value))
 					setValidInputs({ ...validInputs, [type]: true });
 				else setValidInputs({ ...validInputs, [type]: false });
 				break;
