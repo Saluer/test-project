@@ -40,13 +40,12 @@ input {
 	display: block;
 	width: 100%;
 	min-height: 2.5rem;
-	outline: 1px thin gray;
 	color: rgb(89, 155, 209);
 }
 
 .form__text-field > input:focus {
 	color: rgb(3, 3, 7);
-	outline: 1px thin rgb(40, 175, 238);
+	border: thin rgb(40, 175, 238);
 }
 
 .form__text-field > input:not([value=""]){
@@ -69,6 +68,7 @@ input {
 	cursor: pointer;
 	width:100%;
 	border: none !important;
+	color:gray;
 }
 .choices__choice:hover {
 	background-color: rgb(228, 246, 246);
@@ -100,6 +100,10 @@ input {
 	text-align: center;
 	color: white;
 	background-color: rgb(26, 134, 223);
+}
+
+.button:not(:disabled):hover{
+	border: 2px solid black; 
 }
 
 .button:disabled {
