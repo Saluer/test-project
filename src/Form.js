@@ -5,7 +5,7 @@ import {
 	PhoneField,
 	LanguageField,
 	CheckField,
-} from "./Inputs";
+} from "./inputs";
 
 const Form = () => {
 	const [isFormValid, setIsFormValid] = useState(false);
@@ -19,7 +19,7 @@ const Form = () => {
 	const validate = (value, type) => {
 		switch (type) {
 			case "name":
-				if (/^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$/.test(value))
+				if (/[A-Za-zА-Яа-яЁё]+(\s+[A-Za-zА-Яа-яЁё]+)?/.test(value))
 					setValidInputs({ ...validInputs, [type]: true });
 				else setValidInputs({ ...validInputs, [type]: false });
 				break;
