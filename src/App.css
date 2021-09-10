@@ -49,6 +49,10 @@ input {
 	outline: 1px thin rgb(40, 175, 238);
 }
 
+.form__text-field > input:not([value=""]){
+	color: rgb(3, 3, 7);
+}
+
 .text-field__choices {
 	border-radius: 0.25rem;
 	margin-top:0.2rem;
@@ -78,6 +82,11 @@ input {
 .error-message {
 	color: rgb(231, 30, 30);
 	padding: 0.3rem 0;
+}
+
+.check-field{
+	margin-top: 1.5rem;
+	margin-bottom:1.5rem;
 }
 
 .button {
