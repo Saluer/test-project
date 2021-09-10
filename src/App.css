@@ -101,7 +101,12 @@ input {
 	cursor: pointer;
 	width: 100%;
 	border: none !important;
-	color: gray !important;
+	color: #756f86 !important;
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 21px;
 }
 .choices__choice:hover {
 	background-color: rgb(228, 246, 246);
