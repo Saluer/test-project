@@ -12,27 +12,6 @@ input {
 	margin: 0 auto;
 }
 
-@media (min-device-width: 1600px) {
-	.App__form {
-		width: 1500px;
-	}
-}
-@media (device-width: 1280px) {
-	.App__form {
-		width: 1100px;
-	}
-}
-@media (device-width: 1024px) {
-	.App__form {
-		width: 980px;
-	}
-}
-@media (device-width: 360px) {
-	.App__form {
-		width: 200px;
-	}
-}
-
 .App__form > h2 {
 	margin-bottom: 0.5rem;
 }
@@ -61,22 +40,22 @@ input {
 	display: block;
 	width: 100%;
 	min-height: 2.5rem;
-	border: 1px solid gray;
-	box-shadow: inset;
+	outline: 1px thin gray;
 	color: rgb(89, 155, 209);
 }
 
 .form__text-field > input:focus {
 	color: rgb(3, 3, 7);
-	border: 1px thin rgb(40, 175, 238);
+	outline: 1px thin rgb(40, 175, 238);
 }
 
 .text-field__choices {
+	border-radius: 0.25rem;
+	margin-top:0.2rem;
 	cursor: pointer;
 	width:100%;
 	position:relative;
-	z-index: 1;
-	border: 1px solid gray;
+	outline: 1px solid gray;
 	display: none;
 }
 .text-field__input--choice{
