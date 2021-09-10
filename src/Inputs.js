@@ -12,7 +12,7 @@ export const NameField = ({ validate, isValid }) => {
 		<div className="form__text-field">
 			<label className="text-field__label">Имя</label>
 			<input
-				className=""
+				className="text-field__input"
 				placeholder={placeholderValue}
 				onChange={handleChange}
 				value={value}
@@ -37,7 +37,7 @@ export const EmailField = ({ validate, isValid }) => {
 		<div className="form__text-field">
 			<label className="text-field__label">Email</label>
 			<input
-				className=""
+				className="text-field__input"
 				placeholder={placeholderValue}
 				onChange={handleChange}
 				value={value}
@@ -62,7 +62,7 @@ export const PhoneField = ({ validate, isValid }) => {
 		<div className="form__text-field">
 			<label className="text-field__label">Номер телефона</label>
 			<input
-				className=""
+				className="text-field__input"
 				placeholder={placeholderValue}
 				onChange={handleChange}
 				value={value}
@@ -106,7 +106,7 @@ export const LanguageField = ({ validate, isValid }) => {
 			}}
 		>
 			<label className="text-field__label">Язык</label>
-			<input className="text-field__choice-input"
+			<input className="text-field__input--choice"
 				placeholder={placeholderValue}
 				value={value}
 				onClick={hideOrShow}

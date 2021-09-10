@@ -79,7 +79,7 @@ input {
 	border: 1px solid gray;
 	display: none;
 }
-.text-field__choice-input{
+.text-field__input--choice{
 	cursor: pointer;
 }
 .choices__choice {
@@ -102,6 +102,7 @@ input {
 }
 
 .button {
+	cursor: pointer;
 	display: block;
 	margin-top: 1rem;
 	width: 100%;
@@ -114,6 +115,7 @@ input {
 }
 
 .button:disabled {
+	cursor: default;
 	background-color: rgb(187, 212, 235);
 	color: rgb(148, 148, 148);
 }
