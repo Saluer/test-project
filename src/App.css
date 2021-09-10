@@ -2,8 +2,10 @@
 	box-sizing: border-box;
 }
 
-*,*:focus,*:hover{
-    outline:none;
+*,
+*:focus,
+*:hover {
+	outline: none;
 }
 
 body,
@@ -18,15 +20,31 @@ input {
 
 .App__form > h2 {
 	margin-bottom: 0.5rem;
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 44px;
 }
 
 .App__form a {
 	text-decoration: none;
-	color: rgb(38, 124, 194);
+	color: rgba(8, 128, 174, 1);
+
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .App__form span {
 	margin-bottom: 1.5rem;
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 .form__text-field:first {
@@ -37,69 +55,91 @@ input {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	margin-top:1.75rem;
+	margin-top: 1.75rem;
 	margin-bottom: 1.5rem;
 }
 
 .form__text-field input {
-	padding:0.5rem;
-	border-radius: 0.25rem;
+	padding: 0.5rem;
 	display: block;
 	width: 100%;
 	min-height: 2.5rem;
-	border:1px solid rgb(212, 212, 212);
-	box-shadow: 0px 0px 1px 0px rgb(212, 212, 212); 
-	color: rgb(89, 155, 209);
+	box-shadow: 0px 0px 1px 0px rgb(212, 212, 212);
+	color: rgba(124, 156, 191, 1);
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 21px;
+	background: #ffffff;
+	border: 1px solid #dbe2ea;
+	box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+	border-radius: 6px;
 }
 
-
 .form__text-field > input:focus {
-	border:2px solid rgb(89, 155, 209);
+	border: 2px solid rgba(8, 128, 174, 1);
 	color: rgb(3, 3, 7);
 }
 
-.form__text-field > input:not([value=""]){
+.form__text-field > input:not([value=""]) {
 	color: rgb(3, 3, 7);
 }
 
 .text-field__choices {
 	border-radius: 0.25rem;
-	margin-top:0.2rem;
+	margin-top: 0.2rem;
 	cursor: pointer;
-	width:100%;
+	width: 100%;
 	outline: 1px solid gray;
 	display: none;
 }
-.text-field__input--choice{
+.text-field__input--choice {
 	cursor: pointer;
 }
 .choices__choice {
 	cursor: pointer;
-	width:100%;
+	width: 100%;
 	border: none !important;
-	color:gray !important;
+	color: gray !important;
 }
 .choices__choice:hover {
 	background-color: rgb(228, 246, 246);
 }
 
 .text-field__label {
-	color: rgb(110, 105, 105);
+	color: rgba(117, 111, 134, 1);
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 21px;
 	padding: 0.3rem 0;
 }
 
 .error-message {
-	position:absolute;
+	position: absolute;
 	margin-top: 4.3rem;
-	color: rgb(231, 30, 30);
 	z-index: -1;
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+
+	color: #ff7171;
 }
 
-.check-field .error-message{
+.check-field .error-message {
 	margin-top: 0.15rem;
 }
-.check-field{
-	margin-top:2rem;
+.check-field {
+	margin-top: 2rem;
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 21px;
 }
 .button {
 	cursor: pointer;
@@ -111,11 +151,21 @@ input {
 	border-radius: 0.25rem;
 	text-align: center;
 	color: white;
-	background-color: rgb(26, 134, 223);
+	background: rgba(8, 128, 174, 1);
+	font-family: IBM Plex Sans;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 21px;
+	box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08),
+		0px 4px 8px rgba(44, 39, 56, 0.08);
 }
 
-.button:not(:disabled):hover{
-	border: 2px solid black; 
+.button:not(:disabled):hover {
+	border: 2px solid rgba(44, 39, 56, 0, 86);
+	background: rgba(235, 244, 248, 1);
+
+	box-shadow: 0px 4px 8px 0px rgba(44, 39, 56, 0, 08);
 }
 
 .button:disabled {
